@@ -6,6 +6,7 @@ import { FiTrash } from "react-icons/fi";
 import { useCart } from "../context/cardContext";
 
 import { useState } from "react"; // Import useState for loading state
+import Link from "next/link";
 
 
 // Define CartItem type
@@ -120,7 +121,7 @@ export default function CartPage() {
               </span>
             </div>
           </div>
-                <button
+   <Link href={"/billing"}>         <button
             className={`w-full text-lg md:text-base font-semibold text-white bg-cyan-500 py-3 mt-6 rounded-sm hover:bg-cyan-600 px-5 transition ${loading ? "opacity-50 cursor-not-allowed" : ""}`}
             onClick={handleCheckout}
             disabled={loading} // Disable button while loading
@@ -132,7 +133,7 @@ export default function CartPage() {
             ) : (
               "Proceed to Checkout"
             )}
-          </button>
+          </button></Link>    
         </div>
       </div>
     </div>
