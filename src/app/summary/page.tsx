@@ -6,7 +6,7 @@ import { FiTrash } from "react-icons/fi";
 import { useCart } from "../context/cardContext";
 
 import { useState } from "react"; // Import useState for loading state
-import Link from "next/link";
+
 
 // Define CartItem type
 interface CartItem {
